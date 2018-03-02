@@ -110,10 +110,8 @@ class MbedTerrierSpider(scrapy.Spider):
         return files
 
     def has_folders(self, response):
-        for folder in response.xpath(
-                './/*[@class="fa fa-folder-open"]//../text()').extract():
-            return True
-        return False
+        return response.xpath(
+            './/*[@class="fa fa-folder-open"]//../text()').extract()
 
     def parse_repository(self, response):
         library = response.meta['library']
