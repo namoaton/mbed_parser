@@ -8,7 +8,8 @@
         "https://os.mbed.com/users/inkiiin/code/DISCO-F469NI_LCDTS_GUI_demo/",
         "https://os.mbed.com/teams/Configurable-Robots/code/Configurable_Robots/",
         "https://os.mbed.com/teams/ST/code/DISCO-F469NI_LCDTS_demo/",
-        "https://os.mbed.com/users/wupinxian/code/DISCO-F469NI_LCDTS_demo/"
+        "https://os.mbed.com/users/wupinxian/code/DISCO-F469NI_LCDTS_demo/",
+        "https://os.mbed.com/users/grantphillips/code/DISCOF469LCD/"
     ],
     "frameworks": "mbed",
     "keywords": [

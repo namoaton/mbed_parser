@@ -4,6 +4,9 @@
         "url": "https://os.mbed.com/users/jaustin32/"
     },
     "description": "fhfhfh",
+    "examples": [
+        "https://os.mbed.com/users/bjs9/code/SDFileSystem/"
+    ],
     "frameworks": "mbed",
     "keywords": "4DGL-uLCD-SE",
     "name": "4DGL-uLCD-SE",

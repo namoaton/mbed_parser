@@ -7,10 +7,10 @@
     "examples": [
         "https://os.mbed.com/users/fahimalavi/code/example-ublox-cellular-interface/",
         "https://os.mbed.com/teams/ublox/code/HelloMQTT/",
-        "https://os.mbed.com/teams/ublox/code/example-ublox-cellular-interface/",
-        "https://os.mbed.com/teams/ublox/code/example-ublox-mbed-client/",
         "https://os.mbed.com/users/mudassar0121/code/example-ublox-cellular-interface/",
-        "https://os.mbed.com/users/mudassar0121/code/example-ublox-cellular-interface_r410M/"
+        "https://os.mbed.com/users/mudassar0121/code/example-ublox-cellular-interface_r410M/",
+        "https://os.mbed.com/teams/ublox/code/example-ublox-mbed-client/",
+        "https://os.mbed.com/teams/ublox/code/example-ublox-cellular-interface/"
     ],
     "frameworks": "mbed",
     "keywords": [

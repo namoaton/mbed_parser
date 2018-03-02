@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
+import logging
 import scrapy
 from mbed_parser.items import MbedParserItem, MbedParserLoader
+
+logging.basicConfig()
+logger = logging.getLogger('mbed-terrier')
+logger.setLevel(20)
 
 
 class MbedTerrierSpider(scrapy.Spider):
@@ -39,7 +44,7 @@ class MbedTerrierSpider(scrapy.Spider):
             name = url[4]
 
         if name in blacklist:
-            print("***" * 20, name, "is core library")
+            logger.info("is core library")
             return True
         return False
 
@@ -62,11 +67,11 @@ class MbedTerrierSpider(scrapy.Spider):
             library = item.load_item()
             # print(library)
             if int(library['commits']) < 1:
-                print("Low commits rate")
+                logger.info("Low commits rate")
                 continue
             if int(library['imports']) < 5:
                 self.lib_page_cnt = self.lib_page_max
-                print("Stop")
+                logger.info("Stop")
             if self.has_non_ascii_char(library['repo_url']):
                 continue
             if self.is_mbed_core_library(name=library['name']):
@@ -104,20 +109,19 @@ class MbedTerrierSpider(scrapy.Spider):
             files.add(file.split('.')[-1])
         return files
 
-    def get_folders(self, response):
-        folders = set()
+    def has_folders(self, response):
         for folder in response.xpath(
                 './/*[@class="fa fa-folder-open"]//../text()').extract():
-            folders.add(folder)
-        return folders
+            return True
+        return False
 
     def parse_repository(self, response):
         library = response.meta['library']
         if self.is_fork(response):
-            print(library['repo_url'], "****" * 20, 'fork')
+            logger.info(library['repo_url'] + ' is fork')
             return
-        if self.get_folders(response) == set(
-                'lib') and not self.get_file_extensions(response):
+        if not self.has_folders(response) and not (
+                self.get_file_extensions(response) - set(['bld', 'lib'])):
             return
         request = scrapy.Request(
             self.make_mbed_url(library['repo_url'] + "dependents"),

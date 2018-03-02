@@ -6,7 +6,8 @@
     "description": "The MLX90393 is based on the Hall-effect and the patented Triaxis® technology from Melexis. The output signals (raw X, Y, Z Magnetic data and Temperature data) will be provided through ...",
     "examples": [
         "https://os.mbed.com/users/EiJay/code/CherryStone/",
-        "https://os.mbed.com/users/zbobze/code/MicroteslameterImplemantationVersion/"
+        "https://os.mbed.com/users/zbobze/code/MicroteslameterImplemantationVersion/",
+        "https://os.mbed.com/users/el15mh/code/MagTrix/"
     ],
     "frameworks": "mbed",
     "keywords": [

@@ -12,8 +12,7 @@
         "https://os.mbed.com/users/FBSEletronica/code/LPCXpresso4337_OM13082_test/",
         "https://os.mbed.com/users/uLipe/code/ftf_mbed_lab1/",
         "https://os.mbed.com/users/uLipe/code/ftf_mbed_lab2/",
-        "https://os.mbed.com/teams/Missouri-ST-IEEE-Robotics-Team/code/Power_Management_Board_REV_A/",
-        "https://os.mbed.com/teams/SMART-KATODIK/code/04_PGN_TR_00000002/"
+        "https://os.mbed.com/teams/Missouri-ST-IEEE-Robotics-Team/code/Power_Management_Board_REV_A/"
     ],
     "frameworks": "mbed",
     "keywords": [

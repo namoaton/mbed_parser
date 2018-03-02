@@ -9,12 +9,12 @@
         "https://os.mbed.com/teams/ublox/code/example-ublox-cellular-driver-gen/",
         "https://os.mbed.com/teams/ublox/code/example-ublox-at-cellular-interface-ext/",
         "https://os.mbed.com/teams/ublox/code/HelloMQTT/",
-        "https://os.mbed.com/teams/ublox/code/example-ublox-cellular-interface/",
-        "https://os.mbed.com/teams/ublox/code/example-ublox-mbed-client/",
         "https://os.mbed.com/users/mudassar0121/code/example-ublox-cellular-interface/",
         "https://os.mbed.com/users/mudassar0121/code/example-ublox-cellular-interface_r410M/",
         "https://os.mbed.com/users/michaelVisimid/code/ublox_new_driver_test/",
-        "https://os.mbed.com/teams/ublox/code/example-reading-imei-imsi/"
+        "https://os.mbed.com/teams/ublox/code/example-reading-imei-imsi/",
+        "https://os.mbed.com/users/mudassar0121/code/example-C030-out-of-box-demo/",
+        "https://os.mbed.com/teams/ublox/code/example-C030-out-of-box-demo/"
     ],
     "frameworks": "mbed",
     "keywords": [

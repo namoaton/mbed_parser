@@ -8,8 +8,7 @@
         "https://os.mbed.com/users/wim/code/SC16IS750_Test/",
         "https://os.mbed.com/users/wim/code/mbed_SC16IS750/",
         "https://os.mbed.com/users/whatnick/code/Xadow_SC16IS750_Test/",
-        "https://os.mbed.com/users/whatnick/code/Xadow_MPU9150AHRS/",
-        "https://os.mbed.com/teams/SMART-KATODIK/code/04_PGN_TR_00000002/"
+        "https://os.mbed.com/users/whatnick/code/Xadow_MPU9150AHRS/"
     ],
     "frameworks": "mbed",
     "keywords": [

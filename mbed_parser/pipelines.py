@@ -4,10 +4,13 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import logging
 import json
 import codecs
 import os
-
+logging.basicConfig()
+logger = logging.getLogger('mbed-pipeline-terrier')
+logger.setLevel(20)
 
 class MbedParserPipeline(object):
     def print_item(self, lib_info):
@@ -26,8 +29,7 @@ class MbedParserPipeline(object):
                 ".json",
                 "w",
                 encoding='utf-8') as f:
-            print("####################  >>>  ",
-                  repo_tokens[6] + "_" + repo_tokens[4] + ".json")
+            logger.info("Save to %s_%s.json  "%(repo_tokens[6],repo_tokens[4]))
             json.dump(
                 dict(json_item),
                 f,
