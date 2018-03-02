@@ -37,18 +37,23 @@ class MbedParserPipeline(object):
                 ensure_ascii=False)
 
     def process_item(self, item, spider):
-        json_item = {}
-        json_item['authors'] = {}
-        json_item['authors']['name'] = item['author_name']
-        json_item['authors'][
-            'url'] = "https://os.mbed.com" + item['author_url']
+        json_item = {
+            'authors': {
+                'name': item['author_name'],
+                'url': "https://os.mbed.com" + item['author_url']
+            },
+            'frameworks': 'mbed',
+            'name': item['name'],
+            'platforms': '*',
+            'repository': {
+                'type': 'hg',
+                'url': "https://os.mbed.com" + item['repo_url']
+            }
+        }
         if item['dependencies']:
             json_item['dependencies'] = item['dependencies']
-
         if item['examples']:
             json_item['examples'] = item['examples']
-        json_item['frameworks'] = 'mbed'
-        json_item['name'] = item['name']
         if 'description' in item:
             json_item['description'] = item['description']
         else:
@@ -57,10 +62,5 @@ class MbedParserPipeline(object):
             json_item['keywords'] = item['keywords']
         else:
             json_item['keywords'] = json_item['name']
-        json_item['platforms'] = "*"
-        json_item['repository'] = {}
-        json_item['repository']['type'] = 'hg'
-        json_item['repository'][
-            'url'] = "https://os.mbed.com" + item['repo_url']
         self.print_item(json_item)
         self.write_to_json_file(json_item)
